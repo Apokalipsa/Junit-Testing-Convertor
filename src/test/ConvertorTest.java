@@ -41,4 +41,14 @@ public class ConvertorTest {
 
 	
 	}
+	@Test
+	public void testKg2Pounds(){
+		double kg = 1.5;
+		double pounds = 2.20462262;
+		double result = (kg * pounds);
+
+		assertEquals(3.30693393, result, 1e-15);
+		
+	}
+}
 
