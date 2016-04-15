@@ -63,7 +63,7 @@ public class Convertor {
 
 	}
 
-	public static void cent2inch() {
+	public static void cent2inch(double d) {
 		// TODO Auto-generated method stub
 
 	}
