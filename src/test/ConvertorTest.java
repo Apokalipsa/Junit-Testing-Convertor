@@ -50,5 +50,13 @@ public class ConvertorTest {
 		assertEquals(3.30693393, result, 1e-15);
 		
 	}
+	public void testPounds2Kg(){
+		double pounds = 4;
+		double kg = 0.45359237;
+		double result = (pounds * kg);
+
+		assertEquals(1.81436948, result, 1e-15);
+	
+}
 }
 
