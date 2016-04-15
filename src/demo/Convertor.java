@@ -59,7 +59,12 @@ public class Convertor {
 	}
 
 	public static void far2cel() {
-		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		Double Fahrenheit = input.nextDouble();
+
+		System.out.print(Fahrenheit + " Far" + ((Fahrenheit - 32) * (5 / 9.0)) + " Cel");
+		converter();
+		input.close();
 
 	}
 
