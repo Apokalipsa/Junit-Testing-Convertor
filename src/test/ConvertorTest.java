@@ -65,7 +65,13 @@ public class ConvertorTest {
 		assertEquals(89.6, result, 1e-15);
 		
 	}
-	
-}
 
+	public void testFar2Cel() {
+		double fahrenheit = 50.0;
+		double result = ((fahrenheit - 32) * (5 / 9.0));
+
+		assertEquals(10.0, result, 1e-15);
+
+	}
+}
 
