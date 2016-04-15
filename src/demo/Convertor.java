@@ -59,7 +59,13 @@ public class Convertor {
 	}
 
 	public static void inch2cent() {
-		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+
+		double inches = input.nextDouble();
+		double result = inches * 2.54;
+
+		System.out.println(inches + " inches is " + result + " centimeters.");
+		input.close();
 
 	}
 
