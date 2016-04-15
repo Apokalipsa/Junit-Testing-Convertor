@@ -64,7 +64,13 @@ public class Convertor {
 	}
 
 	public static void cent2inch() {
-		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+
+		double cent = input.nextDouble();
+		double result = (cent * 0.39370079);
+
+		System.out.println(cent + " centimeters is " + result + " inches.");
+		input.close();
 
 	}
 
