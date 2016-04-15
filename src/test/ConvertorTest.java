@@ -50,6 +50,7 @@ public class ConvertorTest {
 		assertEquals(3.30693393, result, 1e-15);
 		
 	}
+	@Test
 	public void testPounds2Kg(){
 		double pounds = 4;
 		double kg = 0.45359237;
@@ -58,6 +59,7 @@ public class ConvertorTest {
 		assertEquals(1.81436948, result, 1e-15);
 	
 }
+	@Test
 	public void testCel2Far() {
 		double celsius = 32.0;
 		double result = ((celsius * 9 / 5.0) + 32);
@@ -65,7 +67,7 @@ public class ConvertorTest {
 		assertEquals(89.6, result, 1e-15);
 		
 	}
-
+	@Test
 	public void testFar2Cel() {
 		double fahrenheit = 50.0;
 		double result = ((fahrenheit - 32) * (5 / 9.0));
