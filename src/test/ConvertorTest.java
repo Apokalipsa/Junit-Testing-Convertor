@@ -58,5 +58,14 @@ public class ConvertorTest {
 		assertEquals(1.81436948, result, 1e-15);
 	
 }
+	public void testCel2Far() {
+		double celsius = 32.0;
+		double result = ((celsius * 9 / 5.0) + 32);
+		
+		assertEquals(89.6, result, 1e-15);
+		
+	}
+	
 }
+
 
