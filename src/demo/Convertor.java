@@ -63,6 +63,7 @@ public class Convertor {
 
 	}
 
+<<<<<<< HEAD
 	public static void cent2inch() {
 		Scanner input = new Scanner(System.in);
 
@@ -71,6 +72,10 @@ public class Convertor {
 
 		System.out.println(cent + " centimeters is " + result + " inches.");
 		input.close();
+=======
+	public static void cent2inch(double d) {
+		// TODO Auto-generated method stub
+>>>>>>> testing
 
 	}
 
