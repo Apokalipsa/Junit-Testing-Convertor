@@ -49,7 +49,12 @@ public class Convertor {
 	}
 
 	public static void cel2far() {
-		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+
+		double celsius = input.nextDouble();
+		System.out.print(celsius + " Cel " + ((celsius * 9 / 5.0) + 32) + " Far");
+		converter();
+		input.close();
 
 	}
 
