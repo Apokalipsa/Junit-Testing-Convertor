@@ -89,8 +89,13 @@ public class Convertor {
 	}
 
 	public static void kg2pounds() {
-		// TODO Auto-generated method stub
-
+		Scanner input = new Scanner(System.in);
+		
+		double kg = input.nextDouble();
+		double result = (kg * 2.20462262);
+		
+		System.out.println(kg + " kilograms is " + result + " pounds.");
+		input.close();
 	}
 
 }
