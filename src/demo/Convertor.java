@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class Convertor {
 	public static void main(String[] args) {
-		// Convertor Program created by Amila, Dijana & Amel
+		
 		System.out.print(" === Converting Program ===\n");
-		converter();
+		convertor();
+		
 	}
 
-	private static void converter() {
+	public static void convertor() {
 
 		Scanner input = new Scanner(System.in);
 		System.out.print("\nEnter 1 for Kilograms to Pounds" + "\nEnter 2 for Pounds to Kilograms"
@@ -17,101 +18,58 @@ public class Convertor {
 				+ "\nEnter 5 for Celsius to Fahrenheit" + "\nEnter 6 for Fahrenheit to Celsius"
 				+ "\nEnter Something else for exit " + "\nYour Option:");
 		int selection = input.nextInt();
-
-		if (selection == 1) {
+		
+		Methods  metode = new Methods ();
+		
+		switch (selection) {
+		case 1:
 			System.out.print("Enter the number of Kg: ");
-			kg2pounds();
+			double kg = input.nextDouble();
+			System.out.print(kg + " kg is: " + metode.kg2pounds(kg) + " pounds");
 
-		} else if (selection == 2) {
+			break;
+		case 2:
 			System.out.print("Enter the number of Pounds: ");
-			pounds2kg();
+			double pounds = input.nextDouble();
+			System.out.print(pounds + " pounds is: " + metode.pounds2kg(pounds) + " kg");
 
-		} else if (selection == 3) {
+			break;
+		case 3:
 			System.out.print("Enter the number of Centimeters:");
-			cent2inch();
+			double cm = input.nextDouble();
+			System.out.print(cm + " cm is: " + metode.cent2inch(cm) + " inches");
 
-		} else if (selection == 4) {
+			break;
+		case 4:
 			System.out.print("Enter the number of Inches:");
-			inch2cent();
+			double inch = input.nextDouble();
+			System.out.print(inch + " inches is: " + metode.inch2cent(inch) + " cm");
 
-		} else if (selection == 5) {
+			break;
+		case 5:
 			System.out.print("Enter a degree in Fahrenheit:");
-			far2cel();
-
-		} else if (selection == 6) {
+			double fahr=input.nextDouble();
+			System.out.print(fahr + " fahrenheit is: " + metode.far2cel(fahr) + " Cel");
+			break;
+		case 6:
 			System.out.print("Enter a degree in Celsius:");
-			cel2far();
+			double cel=input.nextDouble();
+			System.out.print(cel + " celsius is: " + metode.cel2far(cel) + " Far");
+			break;
 
-		} else {
+		case 7: {
+			System.out.println("Hvala Vam na koristenju nasih usluga! ");
+			System.exit(1);
+		}
+
+		default:
 			System.out.print("Bye..");
+			
 		}
 		input.close();
-	}
-
-	public static void cel2far() {
-		Scanner input = new Scanner(System.in);
-
-		double celsius = input.nextDouble();
-		System.out.print(celsius + " Cel " + ((celsius * 9 / 5.0) + 32) + " Far");
-		converter();
-		input.close();
 
 	}
-
-	public static void far2cel() {
-		Scanner input = new Scanner(System.in);
-		Double Fahrenheit = input.nextDouble();
-
-		System.out.print(Fahrenheit + " Far" + ((Fahrenheit - 32) * (5 / 9.0)) + " Cel");
-		converter();
-		input.close();
-
-	}
-
-	public static void inch2cent() {
-		Scanner input = new Scanner(System.in);
-
-		double inches = input.nextDouble();
-		double result = inches * 2.54;
-
-		System.out.println(inches + " inches is " + result + " centimeters.");
-		input.close();
-
-	}
-
-
-	public static void cent2inch() {
-		Scanner input = new Scanner(System.in);
-
-		double cent = input.nextDouble();
-		double result = (cent * 0.39370079);
-
-		System.out.println(cent + " centimeters is " + result + " inches.");
-		input.close();
-	}
-
-
 	
 
-	public static void pounds2kg() {
-		Scanner input = new Scanner(System.in);
-		
-		double pounds = input.nextDouble();
-		double result = (pounds * 0.45359237);
-		
-		System.out.println(pounds + " pounds is " + result + " kilograms.");
-		input.close();
-
-	}
-
-	public static void kg2pounds() {
-		Scanner input = new Scanner(System.in);
-		
-		double kg = input.nextDouble();
-		double result = (kg * 2.20462262);
-		
-		System.out.println(kg + " kilograms is " + result + " pounds.");
-		input.close();
-	}
-
 }
+
